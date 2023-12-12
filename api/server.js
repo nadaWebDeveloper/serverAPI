@@ -2,7 +2,7 @@ import express from 'express'
 import cors from 'cors'
 
 import {dev}  from '../configs/index.js'
-import {connectDB} from '../configs/db.js'
+import connectDB from '../configs/db.js'
 import productRoute from '../routes/productRouter.js'
 
 const app = express();
