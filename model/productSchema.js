@@ -1,6 +1,6 @@
 import { Schema , model} from "mongoose";
 const productSchema = new Schema({
-    _id: Number,
+    // _id: mongoose.Schema.Types.ObjectId,
     title:String,
     price:Number
 })

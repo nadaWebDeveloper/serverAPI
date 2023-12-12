@@ -37,12 +37,13 @@ app.get('/products', async (req, res)=>{
 
    app.get('/products/:id',async (req, res)=>{
    try {
-    // const id = Number(req.params.id)
+    const {id} = req.params
     // const product = products.find((product) => product.id === id)
-    const product= await product.find()
+    const productSingle= await product.findOne({ _id: id })
 
     res.json({
-        product:product
+      message: 'Git Single Products From the Store' ,
+        product:productSingle
       })
    } catch (error) {
     res.status(500).send({message: error.message})
